@@ -7,20 +7,15 @@ app.use(cors())
 
 const goggins = {
     'exercise': {
-        'age' : 29,
-        'birthName': 'Sheyaa Bin Abraham-Joseph',
-        'birthLocation': 'London'
+        'quote': 'There is no time to allow yourself to think about being tired when you know that you have a target on your back for all of the other competitors trying to hunt you down.'
     },
     'life': {
-        'age' : 29,
-        'birthName': 'Chancelor Bennett',
-        'birthLocation': 'Chicago'
+        'quote': 'Your best self might be buried deep within you. It might require you to become obsessed with finding out what you are capable of! I had to leave normal behind.'
     },
-    'funny': {
-        'age' : 29,
-        'birthName': 'Dylan',
-        'birthLocation': 'Dylan'
+    'random': {
+        'quote': 'Some of you may be working with pennies rather than nickels and dimes. A lot of you may need to get loans from the bank before you’re ready for the money! We all start somewhere!'
     }
+    
 }
 
 app.get('/', (request, response)=>{
