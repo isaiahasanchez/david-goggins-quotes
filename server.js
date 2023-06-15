@@ -5,18 +5,18 @@ const PORT = 8000
 
 app.use(cors())
 
-const rappers = {
-    'savage': {
+const goggins = {
+    'exercise': {
         'age' : 29,
         'birthName': 'Sheyaa Bin Abraham-Joseph',
         'birthLocation': 'London'
     },
-    'chance the rapper': {
+    'life': {
         'age' : 29,
         'birthName': 'Chancelor Bennett',
         'birthLocation': 'Chicago'
     },
-    'dylan': {
+    'funny': {
         'age' : 29,
         'birthName': 'Dylan',
         'birthLocation': 'Dylan'
@@ -27,12 +27,12 @@ app.get('/', (request, response)=>{
     response.sendFile(__dirname + '/index.html')
 })
 
-app.get('/api/:rapperName', (request, response)=>{
-   const rappersName = request.params.rapperName.toLowerCase()
-   if(rappers[rappersName]){
-    response.json(rappers[rappersName])
+app.get('/api/:inputtedQuote', (request, response)=>{
+   const inputtedQuote = request.params.inputtedQuote.toLowerCase()
+   if(goggins[inputtedQuote]){
+    response.json(goggins[inputtedQuote])
    } else {
-    response.json(rappers['dylan'])
+    response.json(goggins['dylan'])
    }
 })
 
